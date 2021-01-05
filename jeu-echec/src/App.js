@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import PieceList from "./Components/PieceList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    pieces: [],
+  };
+
+  componentDidMount = () => {
+    this.fetchPieces();
+  };
+
+  fetchPieces = () => {
+    axios
+      .get("https://github.com/Christophe-png/jeu--chec/blob/master/db.json")
+      .then((response) => response.data)
+      .then((data) => {
+        this.setState({
+          pieces: data,
+        });
+      });
+  };
+
+  render() {
+    const { pieces } = this.state;
+    return (
+      <div className="App">
+        <p>Hello !</p>
+        <PieceList pieces={pieces} />
+      </div>
+    );
+  }
 }
 
 export default App;
