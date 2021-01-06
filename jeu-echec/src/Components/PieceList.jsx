@@ -11,7 +11,7 @@ function PieceList(props) {
             <Piece
               key={SinglePiece.id}
               name={SinglePiece.name}
-              imageUrl={SinglePiece.image}
+              image={SinglePiece.image}
             />
           ))}
         </section>

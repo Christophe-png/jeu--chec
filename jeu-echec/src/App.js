@@ -13,11 +13,12 @@ class App extends Component {
 
   fetchPieces = () => {
     axios
-      .get("https://github.com/Christophe-png/jeu--chec/blob/master/db.json")
+      .get("https://my-json-server.typicode.com/Christophe-png/jeu--chec/db")
       .then((response) => response.data)
       .then((data) => {
+        console.log(data["les pièces"]);
         this.setState({
-          pieces: data,
+          pieces: data["les pièces"],
         });
       });
   };
