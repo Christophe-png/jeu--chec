@@ -1,0 +1,6 @@
+.PieceList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f8df0b;
+}

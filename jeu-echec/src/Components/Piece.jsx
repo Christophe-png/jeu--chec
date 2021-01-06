@@ -1,10 +1,11 @@
 import React from "react";
+import "./Piece.css";
 import PropTypes from "prop-types";
 
 function Piece(props) {
   const { name, image } = props;
   return (
-    <div>
+    <div className="Piece">
       <h1>{name}</h1>
       <img src={image} alt={name} />
     </div>

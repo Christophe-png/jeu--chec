@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PieceList from "./Components/PieceList";
+import Piece from "./Components/Piece";
 
 class App extends Component {
   state = {
