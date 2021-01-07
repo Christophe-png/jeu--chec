@@ -1,9 +1,7 @@
 .Piece {
-  width: 200px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid #043a3b;
-  margin: 10px;
+  width: 32%;
+}
+
+.Piece img {
+  max-width: 150px;
 }
